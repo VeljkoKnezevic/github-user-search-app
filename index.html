@@ -10,12 +10,98 @@
       sizes="32x32"
       href="./assets/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="./app.js" defer></script>
 
     <title>Frontend Mentor | GitHub user search app</title>
   </head>
   <body>
-    devfinder Light Dark Search GitHub username... Search Joined Repos Followers
-    Following
+    <header class="header">
+      <nav class="nav">
+        <h1 class="nav__logo">devfinder</h1>
+        <div class="nav__mode">Dark</div>
+        <img src="./assets/icon-moon.svg" alt="" />
+      </nav>
+    </header>
+    <main class="main">
+      <section class="search">
+        <input
+          class="search__input"
+          type="text"
+          placeholder="Search GitHub username..."
+        />
+        <button class="search__button">Search</button>
+      </section>
+
+      <section class="user">
+        <div class="user__info">
+          <img class="user__info__picture" src="//unsplash.it/300/300" alt="" />
+          <div class="user__info__wrapper">
+            <h2 class="user__info__name">The octocat</h2>
+            <div class="user__info__at">@octocat</div>
+            <div class="user__info__date">Joined 25 jan 2011</div>
+          </div>
+        </div>
+        <p class="user__para">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas vel
+          harum sint aliquam non.
+        </p>
+        <div class="user__stats">
+          <div class="user__stats__item">
+            <div class="user__stats__text">Repos</div>
+            <div class="user__stats__number user__stats__repos">8</div>
+          </div>
+          <div class="user__stats__item">
+            <div class="user__stats__text">Followers</div>
+            <div class="user__stats__number user__stats__followers">7944</div>
+          </div>
+          <div class="user__stats__item">
+            <div class="user__stats__text">Following</div>
+            <div class="user__stats__number user__stats__following">9</div>
+          </div>
+        </div>
+        <div class="user__links">
+          <div class="user__links__item">
+            <img
+              class="user__links__image"
+              src="./assets/icon-location.svg"
+              alt=""
+            />
+            <div class="user__links__location">San Francisco</div>
+          </div>
+
+          <div class="user__links__item">
+            <img
+              class="user__links__image"
+              src="./assets/icon-website.svg"
+              alt=""
+            />
+            <div class="user__links__website">https://github.blog</div>
+          </div>
+
+          <div class="user__links__item">
+            <img
+              class="user__links__image"
+              src="./assets/icon-twitter.svg"
+              alt=""
+            />
+            <div class="user__links__twitter">Not available</div>
+          </div>
+          <div class="user__links__item">
+            <img
+              class="user__links__image"
+              src="./assets/icon-company.svg"
+              alt=""
+            />
+            <div class="user__links__company">@github</div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
