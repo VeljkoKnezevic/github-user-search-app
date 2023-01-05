@@ -18,7 +18,7 @@ body {
 header,
 main {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -47,6 +47,15 @@ main {
     margin-left: auto;
     margin-right: 16px;
   }
+
+  &__icon {
+    cursor: pointer;
+
+    &:hover {
+      filter: invert(12%) sepia(13%) saturate(100%) hue-rotate(181deg)
+        brightness(0%) contrast(92%);
+    }
+  }
 }
 
 main {
@@ -73,6 +82,7 @@ main {
       border: none;
       margin-left: 45px;
       width: 100%;
+      font-family: "Space Mono", monospace;
     }
 
     &__button {
@@ -84,9 +94,14 @@ main {
       font-size: 14px;
       line-height: 21px;
       border: none;
-      padding: 12.5px 14px 12.5px 18px;
+      padding: 12.5px 14px 12.5px 14px;
       color: #ffffff;
       margin-right: 7px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #60abff;
+      }
     }
   }
 
@@ -98,7 +113,7 @@ main {
     margin-top: 32px;
 
     &__info,
-    &__para,
+    &__bio,
     &__stats,
     &__links {
       width: 90%;
@@ -140,7 +155,7 @@ main {
       }
     }
 
-    &__para {
+    &__bio {
       font-weight: 400;
       font-size: 13px;
       line-height: 25px;
@@ -194,6 +209,11 @@ main {
         margin-left: 13px;
       }
 
+      &__website:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
       &__location {
         margin-left: 19px;
       }
@@ -231,7 +251,7 @@ main {
         }
       }
 
-      &__para {
+      &__bio {
         font-size: 15px;
         line-height: 25px;
       }
@@ -259,6 +279,43 @@ main {
         &__item:nth-child(3) {
           grid-area: 1 / 2 / 2 / 3;
         }
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .user {
+    display: flex;
+  }
+
+  .user__picture__desktop {
+    display: block;
+    width: 117px;
+    height: 117px;
+    border-radius: 50%;
+    margin-top: 48px;
+    margin-left: 48px;
+  }
+
+  .user {
+    &__info {
+      margin-left: 37px !important;
+      margin-top: 48px !important;
+
+      &__wrapper {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      &__date {
+        grid-area: 1 / 2 / 2 / 3;
+        justify-self: flex-end;
+      }
+
+      &__picture {
+        display: none;
       }
     }
   }

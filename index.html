@@ -25,7 +25,7 @@
       <nav class="nav">
         <h1 class="nav__logo">devfinder</h1>
         <div class="nav__mode">Dark</div>
-        <img src="./assets/icon-moon.svg" alt="" />
+        <img class="nav__icon" src="./assets/icon-moon.svg" alt="" />
       </nav>
     </header>
     <main class="main">
@@ -39,66 +39,79 @@
       </section>
 
       <section class="user">
-        <div class="user__info">
-          <img class="user__info__picture" src="//unsplash.it/300/300" alt="" />
-          <div class="user__info__wrapper">
-            <h2 class="user__info__name">The octocat</h2>
-            <div class="user__info__at">@octocat</div>
-            <div class="user__info__date">Joined 25 jan 2011</div>
-          </div>
-        </div>
-        <p class="user__para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas vel
-          harum sint aliquam non.
-        </p>
-        <div class="user__stats">
-          <div class="user__stats__item">
-            <div class="user__stats__text">Repos</div>
-            <div class="user__stats__number user__stats__repos">8</div>
-          </div>
-          <div class="user__stats__item">
-            <div class="user__stats__text">Followers</div>
-            <div class="user__stats__number user__stats__followers">7944</div>
-          </div>
-          <div class="user__stats__item">
-            <div class="user__stats__text">Following</div>
-            <div class="user__stats__number user__stats__following">9</div>
-          </div>
-        </div>
-        <div class="user__links">
-          <div class="user__links__item">
+        <img
+          class="user__picture__desktop"
+          hidden
+          src="//unsplash.it/300/300"
+          alt=""
+        />
+        <div class="user__content__wrapper">
+          <div class="user__info">
             <img
-              class="user__links__image"
-              src="./assets/icon-location.svg"
+              class="user__info__picture"
+              src="//unsplash.it/300/300"
               alt=""
             />
-            <div class="user__links__location">San Francisco</div>
-          </div>
 
-          <div class="user__links__item">
-            <img
-              class="user__links__image"
-              src="./assets/icon-website.svg"
-              alt=""
-            />
-            <div class="user__links__website">https://github.blog</div>
+            <div class="user__info__wrapper">
+              <h2 class="user__info__name">The octocat</h2>
+              <div class="user__info__at">@octocat</div>
+              <div class="user__info__date">Joined 25 jan 2011</div>
+            </div>
           </div>
+          <p class="user__bio">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+            vel harum sint aliquam non.
+          </p>
+          <div class="user__stats">
+            <div class="user__stats__item">
+              <div class="user__stats__text">Repos</div>
+              <div class="user__stats__number user__stats__repos">8</div>
+            </div>
+            <div class="user__stats__item">
+              <div class="user__stats__text">Followers</div>
+              <div class="user__stats__number user__stats__followers">7944</div>
+            </div>
+            <div class="user__stats__item">
+              <div class="user__stats__text">Following</div>
+              <div class="user__stats__number user__stats__following">9</div>
+            </div>
+          </div>
+          <div class="user__links">
+            <div class="user__links__item">
+              <img
+                class="user__links__image"
+                src="./assets/icon-location.svg"
+                alt=""
+              />
+              <div class="user__links__location">San Francisco</div>
+            </div>
 
-          <div class="user__links__item">
-            <img
-              class="user__links__image"
-              src="./assets/icon-twitter.svg"
-              alt=""
-            />
-            <div class="user__links__twitter">Not available</div>
-          </div>
-          <div class="user__links__item">
-            <img
-              class="user__links__image"
-              src="./assets/icon-company.svg"
-              alt=""
-            />
-            <div class="user__links__company">@github</div>
+            <div class="user__links__item">
+              <img
+                class="user__links__image"
+                src="./assets/icon-website.svg"
+                alt=""
+              />
+              <div class="user__links__website">https://github.blog</div>
+            </div>
+
+            <div class="user__links__item">
+              <img
+                class="user__links__image"
+                src="./assets/icon-twitter.svg"
+                alt=""
+              />
+              <div class="user__links__twitter">Not available</div>
+            </div>
+            <div class="user__links__item">
+              <img
+                class="user__links__image"
+                src="./assets/icon-company.svg"
+                alt=""
+              />
+              <div class="user__links__company">@github</div>
+            </div>
           </div>
         </div>
       </section>

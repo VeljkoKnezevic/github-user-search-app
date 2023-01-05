@@ -18,7 +18,7 @@ body {
 header,
 main {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -45,6 +45,12 @@ main {
   margin-left: auto;
   margin-right: 16px;
 }
+.nav__icon {
+  cursor: pointer;
+}
+.nav__icon:hover {
+  filter: invert(12%) sepia(13%) saturate(100%) hue-rotate(181deg) brightness(0%) contrast(92%);
+}
 
 main .search {
   width: 100%;
@@ -69,6 +75,7 @@ main .search__input {
   border: none;
   margin-left: 45px;
   width: 100%;
+  font-family: "Space Mono", monospace;
 }
 main .search__button {
   background: #0079ff;
@@ -79,9 +86,13 @@ main .search__button {
   font-size: 14px;
   line-height: 21px;
   border: none;
-  padding: 12.5px 14px 12.5px 18px;
+  padding: 12.5px 14px 12.5px 14px;
   color: #ffffff;
   margin-right: 7px;
+  cursor: pointer;
+}
+main .search__button:hover {
+  background-color: #60abff;
 }
 main .user {
   margin-top: 30px;
@@ -90,7 +101,7 @@ main .user {
   border-radius: 15px;
   margin-top: 32px;
 }
-main .user__info, main .user__para, main .user__stats, main .user__links {
+main .user__info, main .user__bio, main .user__stats, main .user__links {
   width: 90%;
   margin: 0 auto;
 }
@@ -124,7 +135,7 @@ main .user__info__date {
   line-height: 19px;
   color: #697c9a;
 }
-main .user__para {
+main .user__bio {
   font-weight: 400;
   font-size: 13px;
   line-height: 25px;
@@ -170,6 +181,10 @@ main .user__links__item {
 main .user__links__website, main .user__links__twitter, main .user__links__company {
   margin-left: 13px;
 }
+main .user__links__website:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 main .user__links__location {
   margin-left: 19px;
 }
@@ -195,7 +210,7 @@ main .user__links__location {
     font-size: 15px;
     line-height: 22px;
   }
-  main .user__para {
+  main .user__bio {
     font-size: 15px;
     line-height: 25px;
   }
@@ -218,5 +233,34 @@ main .user__links__location {
   }
   main .user__links__item:nth-child(3) {
     grid-area: 1/2/2/3;
+  }
+}
+@media (min-width: 900px) {
+  .user {
+    display: flex;
+  }
+  .user__picture__desktop {
+    display: block;
+    width: 117px;
+    height: 117px;
+    border-radius: 50%;
+    margin-top: 48px;
+    margin-left: 48px;
+  }
+  .user__info {
+    margin-left: 37px !important;
+    margin-top: 48px !important;
+  }
+  .user__info__wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+  .user__info__date {
+    grid-area: 1/2/2/3;
+    justify-self: flex-end;
+  }
+  .user__info__picture {
+    display: none;
   }
 }/*# sourceMappingURL=styles.css.map */
