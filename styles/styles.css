@@ -13,6 +13,11 @@ body {
   margin: 0;
   font-family: "Space Mono", monospace;
   background-color: #f6f8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 }
 
 header,
@@ -98,6 +103,14 @@ main .search__input:-ms-input-placeholder {
 }
 main .search__input::placeholder {
   color: #4b6a9b;
+}
+main .search__input--error {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  margin-right: 24px;
+  color: #f74646;
+  width: 150px;
 }
 main .search__button {
   background: #0079ff;
@@ -265,6 +278,10 @@ main .user__links__location {
   }
 }
 @media (min-width: 900px) {
+  main,
+header {
+    max-width: 730px;
+  }
   .user {
     display: flex;
   }

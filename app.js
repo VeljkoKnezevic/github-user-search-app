@@ -1,16 +1,23 @@
 const fetchData = async (value) => {
+  const element = document.querySelector(".search__input--error");
+
   const response = await fetch(
     `https://api.github.com/users/${value || "Octocat"}`,
     {
       mode: "cors",
       headers: {
-        Authorization: "Token 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",
+        Authorization: "Token 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",
       },
     }
   );
-  const data = await response.json();
 
-  return data;
+  if (response.ok) {
+    const data = await response.json();
+    element.textContent = "";
+    return data;
+  } else {
+    element.textContent = "No results";
+  }
 };
 
 const NotAvailableStyling = (element) => {
@@ -38,52 +45,57 @@ const populateData = (value) => {
   const twitter = document.querySelector(".user__links__twitter");
   const company = document.querySelector(".user__links__company");
 
-  fetchData(value).then((response) => {
-    profilePictureDesktop.src = response.avatar_url;
-    profilePicture.src = response.avatar_url;
-    name.textContent = response.name;
-    at.textContent = `@${response.login}`;
-    const responseDate = new Date(response.created_at).toDateString();
-    date.textContent = `Joined
+  fetchData(value)
+    .then((response) => {
+      profilePictureDesktop.src = response.avatar_url;
+      profilePicture.src = response.avatar_url;
+      name.textContent = response.name;
+      at.textContent = `@${response.login}`;
+      const responseDate = new Date(response.created_at).toDateString();
+      date.textContent = `Joined
       ${responseDate.substring(8, 10)}
        ${responseDate.substring(4, 7)}
         ${responseDate.substring(10, 15)}`;
 
-    repos.textContent = response.public_repos;
-    followers.textContent = response.followers;
-    following.textContent = response.following;
+      repos.textContent = response.public_repos;
+      followers.textContent = response.followers;
+      following.textContent = response.following;
 
-    if (response.bio) {
-      bio.textContent = response.bio;
-      bio.style.opacity = "1";
-    } else {
-      bio.textContent = "No bio available.";
-      bio.style.opacity = "0.5";
-    }
+      if (response.bio) {
+        bio.textContent = response.bio;
+        bio.style.opacity = "1";
+      } else {
+        bio.textContent = "No bio available.";
+        bio.style.opacity = "0.5";
+      }
 
-    if (response.location) {
-      location.textContent = response.location;
-      location.parentElement.style.opacity = "1";
-    } else NotAvailableStyling(location);
+      if (response.location) {
+        location.textContent = response.location;
+        location.parentElement.style.opacity = "1";
+      } else NotAvailableStyling(location);
 
-    if (response.blog) {
-      blog.textContent = response.blog;
-      blog.parentElement.style.opacity = "1";
-    } else NotAvailableStyling(blog);
+      if (response.blog) {
+        blog.textContent = response.blog;
+        blog.parentElement.style.opacity = "1";
+      } else NotAvailableStyling(blog);
 
-    if (response.twitter_username) {
-      twitter.textContent = response.twitter_username;
-      twitter.parentElement.style.opacity = "1";
-    } else NotAvailableStyling(twitter);
+      if (response.twitter_username) {
+        twitter.textContent = response.twitter_username;
+        twitter.parentElement.style.opacity = "1";
+      } else NotAvailableStyling(twitter);
 
-    if (response.company) {
-      company.textContent = response.company;
-      company.parentElement.style.opacity = "1";
-    } else NotAvailableStyling(company);
-  });
+      if (response.company) {
+        company.textContent = response.company;
+        company.parentElement.style.opacity = "1";
+      } else NotAvailableStyling(company);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };
 
 populateData();
+
 document.querySelector(".search").addEventListener("submit", (e) => {
   e.preventDefault();
   let input = e.target.elements[0];
@@ -116,3 +128,5 @@ const modeSwitcher = (() => {
     }
   });
 })();
+
+//Error handling odraditi
