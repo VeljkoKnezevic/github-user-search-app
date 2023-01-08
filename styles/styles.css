@@ -27,6 +27,13 @@ main {
   align-items: center;
   margin-top: 31px;
 }
+.nav__clickable {
+  margin-left: auto;
+  display: flex;
+}
+.nav__clickable:hover {
+  cursor: pointer;
+}
 .nav__logo {
   font-weight: 700;
   font-size: 26px;
@@ -40,16 +47,18 @@ main {
   line-height: 19px;
   text-align: right;
   letter-spacing: 2.5px;
-  color: #4b6a9b;
+  color: #697c9a;
   text-transform: uppercase;
-  margin-left: auto;
   margin-right: 16px;
+}
+.nav__mode:hover {
+  filter: brightness(0) saturate(0);
 }
 .nav__icon {
   cursor: pointer;
 }
 .nav__icon:hover {
-  filter: invert(12%) sepia(13%) saturate(100%) hue-rotate(181deg) brightness(0%) contrast(92%);
+  filter: brightness(0) saturate(0);
 }
 
 main .search {
@@ -79,7 +88,16 @@ main .search__input {
   font-family: "Space Mono", monospace;
 }
 main .search__input:hover {
-  cursor: pointer;
+  cursor: text;
+}
+main .search__input::-moz-placeholder {
+  color: #4b6a9b;
+}
+main .search__input:-ms-input-placeholder {
+  color: #4b6a9b;
+}
+main .search__input::placeholder {
+  color: #4b6a9b;
 }
 main .search__button {
   background: #0079ff;
@@ -203,7 +221,7 @@ main .user__links__location {
     line-height: 25px;
   }
   main .user__info {
-    margin-top: 24px !important;
+    margin-top: 40px;
   }
   main .user__info__picture {
     width: 117px;
@@ -260,18 +278,83 @@ main .user__links__location {
   }
   .user__info {
     margin-left: 37px !important;
-    margin-top: 48px !important;
+    margin-top: 0px !important;
   }
   .user__info__wrapper {
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr;
+    margin-top: 48px;
   }
   .user__info__date {
     grid-area: 1/2/2/3;
     justify-self: flex-end;
+    align-self: center;
   }
   .user__info__picture {
     display: none;
   }
+}
+[data-theme=dark] body {
+  background-color: #141d2f;
+}
+[data-theme=dark] header .nav__logo {
+  color: #ffffff;
+}
+[data-theme=dark] header .nav__mode {
+  color: #ffffff;
+  visibility: hidden;
+}
+[data-theme=dark] header .nav__mode::after {
+  visibility: visible;
+  content: "Light";
+}
+[data-theme=dark] header .nav__mode:hover {
+  filter: invert(64%) sepia(10%) saturate(1194%) hue-rotate(185deg) brightness(100%) contrast(87%);
+}
+[data-theme=dark] header .nav__icon {
+  filter: brightness(0) invert(1);
+}
+[data-theme=dark] header .nav__icon:hover {
+  filter: invert(64%) sepia(10%) saturate(1194%) hue-rotate(185deg) brightness(100%) contrast(87%);
+}
+[data-theme=dark] main .search {
+  background-color: #1e2a47;
+}
+[data-theme=dark] main .search__input {
+  background-color: #1e2a47;
+  color: white;
+}
+[data-theme=dark] main .search__input::-moz-placeholder {
+  color: white;
+}
+[data-theme=dark] main .search__input:-ms-input-placeholder {
+  color: white;
+}
+[data-theme=dark] main .search__input::placeholder {
+  color: white;
+}
+[data-theme=dark] main .user {
+  background-color: #1e2a47;
+}
+[data-theme=dark] main .user__info__name {
+  color: white;
+}
+[data-theme=dark] main .user__info__date {
+  color: white;
+}
+[data-theme=dark] main .user__bio {
+  color: white;
+}
+[data-theme=dark] main .user__stats {
+  background-color: #141d2f;
+}
+[data-theme=dark] main .user__stats__text, [data-theme=dark] main .user__stats__number {
+  color: white;
+}
+[data-theme=dark] main .user__links__item {
+  color: white;
+}
+[data-theme=dark] main .user__links__image {
+  filter: brightness(0) invert(1);
 }/*# sourceMappingURL=styles.css.map */

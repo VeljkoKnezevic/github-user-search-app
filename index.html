@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,19 +24,22 @@
     <header class="header">
       <nav class="nav">
         <h1 class="nav__logo">devfinder</h1>
-        <div class="nav__mode">Dark</div>
-        <img class="nav__icon" src="./assets/icon-moon.svg" alt="" />
+        <div class="nav__clickable">
+          <div class="nav__mode">Dark</div>
+          <img class="nav__icon" src="./assets/icon-moon.svg" alt="" />
+        </div>
       </nav>
     </header>
     <main class="main">
-      <section class="search">
+      <form class="search">
         <input
           class="search__input"
           type="text"
+          name="searchbar"
           placeholder="Search GitHub username..."
         />
-        <button class="search__button">Search</button>
-      </section>
+        <input type="submit" value="Search" class="search__button" />
+      </form>
 
       <section class="user">
         <img class="user__picture__desktop" hidden src="" alt="" />

@@ -27,6 +27,15 @@ main {
   align-items: center;
   margin-top: 31px;
 
+  &__clickable {
+    margin-left: auto;
+    display: flex;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   &__logo {
     font-weight: 700;
     font-size: 26px;
@@ -42,18 +51,20 @@ main {
     text-align: right;
     letter-spacing: 2.5px;
 
-    color: #4b6a9b;
+    color: #697c9a;
     text-transform: uppercase;
-    margin-left: auto;
     margin-right: 16px;
+
+    &:hover {
+      filter: brightness(0) saturate(0);
+    }
   }
 
   &__icon {
     cursor: pointer;
 
     &:hover {
-      filter: invert(12%) sepia(13%) saturate(100%) hue-rotate(181deg)
-        brightness(0%) contrast(92%);
+      filter: brightness(0) saturate(0);
     }
   }
 }
@@ -86,7 +97,11 @@ main {
       font-family: "Space Mono", monospace;
 
       &:hover {
-        cursor: pointer;
+        cursor: text;
+      }
+
+      &::placeholder {
+        color: #4b6a9b;
       }
     }
 
@@ -242,8 +257,7 @@ main {
 
     .user {
       &__info {
-        margin-top: 24px !important;
-
+        margin-top: 40px;
         &__picture {
           width: 117px;
           height: 117px;
@@ -313,21 +327,112 @@ main {
   .user {
     &__info {
       margin-left: 37px !important;
-      margin-top: 48px !important;
+      margin-top: 0px !important;
 
       &__wrapper {
         display: grid;
         width: 100%;
         grid-template-columns: 1fr 1fr;
+        margin-top: 48px;
       }
 
       &__date {
         grid-area: 1 / 2 / 2 / 3;
         justify-self: flex-end;
+        align-self: center;
       }
 
       &__picture {
         display: none;
+      }
+    }
+  }
+}
+
+[data-theme="dark"] {
+  body {
+    background-color: #141d2f;
+  }
+
+  header {
+    .nav {
+      &__logo {
+        color: #ffffff;
+      }
+
+      &__mode {
+        color: #ffffff;
+        visibility: hidden;
+
+        &::after {
+          visibility: visible;
+          content: "Light";
+        }
+
+        &:hover {
+          filter: invert(64%) sepia(10%) saturate(1194%) hue-rotate(185deg)
+            brightness(100%) contrast(87%);
+        }
+      }
+
+      &__icon {
+        filter: brightness(0) invert(1);
+        &:hover {
+          filter: invert(64%) sepia(10%) saturate(1194%) hue-rotate(185deg)
+            brightness(100%) contrast(87%);
+        }
+      }
+    }
+  }
+
+  main {
+    .search {
+      background-color: #1e2a47;
+
+      &__input {
+        background-color: #1e2a47;
+        color: white;
+
+        &::placeholder {
+          color: white;
+        }
+      }
+    }
+
+    .user {
+      background-color: #1e2a47;
+
+      &__info {
+        &__name {
+          color: white;
+        }
+
+        &__date {
+          color: white;
+        }
+      }
+
+      &__bio {
+        color: white;
+      }
+
+      &__stats {
+        background-color: #141d2f;
+
+        &__text,
+        &__number {
+          color: white;
+        }
+      }
+
+      &__links {
+        &__item {
+          color: white;
+        }
+
+        &__image {
+          filter: brightness(0) invert(1);
+        }
       }
     }
   }
