@@ -12,7 +12,7 @@ html {
 body {
   margin: 0;
   font-family: "Space Mono", monospace;
-  background-color: #f6f8ff;
+  background-color: hsl(227deg, 100%, 98%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,18 +41,18 @@ main {
 }
 .nav__logo {
   font-weight: 700;
-  font-size: 26px;
-  line-height: 39px;
-  color: #222731;
+  font-size: 1.625rem;
+  line-height: 2.438rem;
+  color: hsl(220deg, 18%, 16%);
   margin: 0;
 }
 .nav__mode {
   font-weight: 700;
-  font-size: 13px;
-  line-height: 19px;
+  font-size: 0.813rem;
+  line-height: 1.188rem;
   text-align: right;
   letter-spacing: 2.5px;
-  color: #697c9a;
+  color: hsl(217deg, 20%, 51%);
   text-transform: uppercase;
   margin-right: 16px;
 }
@@ -69,7 +69,7 @@ main {
 main .search {
   width: 100%;
   height: 60px;
-  background: #fefefe;
+  background: hsl(0deg, 0%, 100%);
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -83,9 +83,9 @@ main .search {
 }
 main .search__input {
   font-weight: 400;
-  font-size: 13px;
-  line-height: 25px;
-  color: #4b6a9b;
+  font-size: 0.813rem;
+  line-height: 1.563rem;
+  color: hsl(217deg, 35%, 45%);
   border: none;
   margin-left: 45px;
   width: 100%;
@@ -96,33 +96,33 @@ main .search__input:hover {
   cursor: text;
 }
 main .search__input::-moz-placeholder {
-  color: #4b6a9b;
+  color: hsl(217deg, 35%, 45%);
 }
 main .search__input:-ms-input-placeholder {
-  color: #4b6a9b;
+  color: hsl(217deg, 35%, 45%);
 }
 main .search__input::placeholder {
-  color: #4b6a9b;
+  color: hsl(217deg, 35%, 45%);
 }
 main .search__input--error {
   font-weight: 700;
-  font-size: 15px;
-  line-height: 22px;
+  font-size: 0.938rem;
+  line-height: 1.375rem;
   margin-right: 24px;
-  color: #f74646;
+  color: hsl(0deg, 92%, 62%);
   width: 150px;
 }
 main .search__button {
-  background: #0079ff;
+  background: hsl(212deg, 100%, 50%);
   border-radius: 10px;
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 0.875rem;
+  line-height: 1.313rem;
   border: none;
-  padding: 12.5px 14px 12.5px 14px;
-  color: #ffffff;
+  padding: 12.5px 14px;
+  color: white;
   margin-right: 7px;
   cursor: pointer;
 }
@@ -131,7 +131,7 @@ main .search__button:hover {
 }
 main .user {
   margin-top: 30px;
-  background: #fefefe;
+  background: hsl(0deg, 0%, 100%);
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
   border-radius: 15px;
   margin-top: 32px;
@@ -157,52 +157,52 @@ main .user__info__picture {
 }
 main .user__info__name {
   font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  color: #2b3442;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: hsl(217deg, 21%, 21%);
   margin: 0;
 }
 main .user__info__at {
   font-weight: 400;
-  font-size: 13px;
-  line-height: 19px;
-  color: #0079ff;
+  font-size: 0.813rem;
+  line-height: 1.188rem;
+  color: hsl(212deg, 100%, 50%);
 }
 main .user__info__date {
   font-weight: 400;
-  font-size: 13px;
-  line-height: 19px;
-  color: #697c9a;
+  font-size: 0.813rem;
+  line-height: 1.188rem;
+  color: hsl(217deg, 20%, 51%);
 }
 main .user__bio {
   font-weight: 400;
-  font-size: 13px;
-  line-height: 25px;
-  color: #4b6a9b;
+  font-size: 0.813rem;
+  line-height: 1.563rem;
+  color: hsl(217deg, 35%, 45%);
   margin-top: 32px;
 }
 main .user__stats {
   display: flex;
-  background: #f6f8ff;
+  background: hsl(227deg, 100%, 98%);
   border-radius: 10px;
   justify-content: space-around;
   padding: 18px 14px;
   margin: 24px auto;
 }
 main .user__stats__text {
-  color: #4b6a9b;
+  color: hsl(217deg, 35%, 45%);
   text-align: center;
   font-weight: 400;
-  font-size: 11px;
-  line-height: 16px;
+  font-size: 0.688rem;
+  line-height: 1;
 }
 main .user__stats__number {
   font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   text-align: center;
   text-transform: uppercase;
-  color: #2b3442;
+  color: hsl(217deg, 21%, 21%);
 }
 main .user__links {
   margin-top: 24px;
@@ -212,10 +212,10 @@ main .user__links__item {
   display: flex;
   align-items: center;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 19px;
+  font-size: 0.813rem;
+  line-height: 1.188rem;
   margin-top: 16px;
-  color: #4b6a9b;
+  color: hsl(217deg, 35%, 45%);
 }
 main .user__links__website, main .user__links__twitter, main .user__links__company {
   margin-left: 13px;
@@ -230,8 +230,8 @@ main .user__links__location {
 
 @media (min-width: 600px) {
   main .search__input {
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 1.125rem;
+    line-height: 1.563rem;
   }
   main .user__info {
     margin-top: 40px;
@@ -241,37 +241,37 @@ main .user__links__location {
     height: 117px;
   }
   main .user__info__name {
-    font-size: 26px;
-    line-height: 39px;
+    font-size: 1.625rem;
+    line-height: 2.438rem;
   }
   main .user__info__at {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   main .user__info__date {
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 0.938rem;
+    line-height: 1.375rem;
   }
   main .user__bio {
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 0.938rem;
+    line-height: 1.563rem;
   }
   main .user__stats__text {
-    font-size: 13px;
-    line-height: 19px;
+    font-size: 0.813rem;
+    line-height: 1.188rem;
   }
   main .user__stats__number {
     text-align: start;
-    font-size: 22px;
-    line-height: 33px;
+    font-size: 1.375rem;
+    line-height: 2.063rem;
   }
   main .user__links {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
   main .user__links__item {
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 0.938rem;
+    line-height: 1.375rem;
   }
   main .user__links__item:nth-child(3) {
     grid-area: 1/2/2/3;
@@ -313,13 +313,13 @@ header {
   }
 }
 [data-theme=dark] body {
-  background-color: #141d2f;
+  background-color: hsl(220deg, 40%, 13%);
 }
 [data-theme=dark] header .nav__logo {
-  color: #ffffff;
+  color: hsl(0deg, 0%, 100%);
 }
 [data-theme=dark] header .nav__mode {
-  color: #ffffff;
+  color: hsl(0deg, 0%, 100%);
   visibility: hidden;
 }
 [data-theme=dark] header .nav__mode::after {
@@ -336,10 +336,10 @@ header {
   filter: invert(64%) sepia(10%) saturate(1194%) hue-rotate(185deg) brightness(100%) contrast(87%);
 }
 [data-theme=dark] main .search {
-  background-color: #1e2a47;
+  background-color: hsl(222deg, 41%, 20%);
 }
 [data-theme=dark] main .search__input {
-  background-color: #1e2a47;
+  background-color: hsl(222deg, 41%, 20%);
   color: white;
 }
 [data-theme=dark] main .search__input::-moz-placeholder {
@@ -352,7 +352,7 @@ header {
   color: white;
 }
 [data-theme=dark] main .user {
-  background-color: #1e2a47;
+  background-color: hsl(222deg, 41%, 20%);
 }
 [data-theme=dark] main .user__info__name {
   color: white;
@@ -364,7 +364,7 @@ header {
   color: white;
 }
 [data-theme=dark] main .user__stats {
-  background-color: #141d2f;
+  background-color: hsl(220deg, 40%, 13%);
 }
 [data-theme=dark] main .user__stats__text, [data-theme=dark] main .user__stats__number {
   color: white;

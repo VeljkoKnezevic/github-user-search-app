@@ -1,22 +1,19 @@
 const fetchData = async (value) => {
-  const element = document.querySelector(".search__input--error");
+  //Fetches data with the provided value and handles error messages
+
+  const errorMessage = document.querySelector(".search__input--error");
 
   const response = await fetch(
     `https://api.github.com/users/${value || "Octocat"}`,
-    {
-      mode: "cors",
-      headers: {
-        Authorization: "Token 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",
-      },
-    }
+    { mode: "cors" }
   );
 
   if (response.ok) {
     const data = await response.json();
-    element.textContent = "";
+    errorMessage.textContent = "";
     return data;
   } else {
-    element.textContent = "No results";
+    errorMessage.textContent = "No results";
   }
 };
 
@@ -26,6 +23,7 @@ const NotAvailableStyling = (element) => {
 };
 
 const populateData = (value) => {
+  //Selects all the data fields and assigns them values based on the response from fetchData
   const profilePictureDesktop = document.querySelector(
     ".user__picture__desktop"
   );
@@ -61,6 +59,8 @@ const populateData = (value) => {
       followers.textContent = response.followers;
       following.textContent = response.following;
 
+      //Handling opacity styling if values in the data are missing
+
       if (response.bio) {
         bio.textContent = response.bio;
         bio.style.opacity = "1";
@@ -90,23 +90,26 @@ const populateData = (value) => {
       } else NotAvailableStyling(company);
     })
     .catch((err) => {
-      console.log(err);
+      throw new Error(err);
     });
 };
 
-populateData();
+const handleSearch = (() => {
+  //Runs the populate data function once so it displays octocats profile
+  //Handles search button submiton
+  const button = document.querySelector(".search");
 
-document.querySelector(".search").addEventListener("submit", (e) => {
-  e.preventDefault();
-  let input = e.target.elements[0];
-  populateData(input.value);
-
-  input.value = "";
-});
-
-const styles = () => {};
+  populateData();
+  button.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let input = e.target.elements[0];
+    populateData(input.value);
+    input.value = "";
+  });
+})();
 
 const modeSwitcher = (() => {
+  //Toggles between light and dark mode
   const clickable = document.querySelector(".nav__clickable");
   const image = document.querySelector(".nav__icon");
 
@@ -128,5 +131,3 @@ const modeSwitcher = (() => {
     }
   });
 })();
-
-//Error handling odraditi

@@ -1,3 +1,15 @@
+$light-body-background: hsl(227, 100%, 98%);
+$logo-text: hsl(220, 18%, 16%);
+$light-date: hsl(217, 20%, 51%);
+$light-text: hsl(217, 35%, 45%);
+$light-main-background: hsl(0, 0%, 100%);
+$error: hsl(0, 92%, 62%);
+$button: hsl(212, 100%, 50%);
+$light-name: hsl(217, 21%, 21%);
+$dark-body-background: hsl(220, 40%, 13%);
+$dark-main-background: hsl(222, 41%, 20%);
+$dark-text: hsl(0, 0%, 100%);
+
 html {
   box-sizing: border-box;
   font-size: 100%;
@@ -12,7 +24,7 @@ html {
 body {
   margin: 0;
   font-family: "Space Mono", monospace;
-  background-color: #f6f8ff;
+  background-color: $light-body-background;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,24 +55,25 @@ main {
 
   &__logo {
     font-weight: 700;
-    font-size: 26px;
-    line-height: 39px;
-    color: #222731;
+    font-size: 1.625rem;
+    line-height: 2.438rem;
+    color: $logo-text;
     margin: 0;
   }
 
   &__mode {
     font-weight: 700;
-    font-size: 13px;
-    line-height: 19px;
+    font-size: 0.813rem;
+    line-height: 1.188rem;
     text-align: right;
     letter-spacing: 2.5px;
 
-    color: #697c9a;
+    color: $light-date;
     text-transform: uppercase;
     margin-right: 16px;
 
     &:hover {
+      //turns into black
       filter: brightness(0) saturate(0);
     }
   }
@@ -69,6 +82,7 @@ main {
     cursor: pointer;
 
     &:hover {
+      //turns into black
       filter: brightness(0) saturate(0);
     }
   }
@@ -78,7 +92,7 @@ main {
   .search {
     width: 100%;
     height: 60px;
-    background: #fefefe;
+    background: $light-main-background;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -92,9 +106,9 @@ main {
 
     &__input {
       font-weight: 400;
-      font-size: 13px;
-      line-height: 25px;
-      color: #4b6a9b;
+      font-size: 0.813rem;
+      line-height: 1.563rem;
+      color: $light-text;
       border: none;
       margin-left: 45px;
       width: 100%;
@@ -106,30 +120,30 @@ main {
       }
 
       &::placeholder {
-        color: #4b6a9b;
+        color: $light-text;
       }
 
       &--error {
         font-weight: 700;
-        font-size: 15px;
-        line-height: 22px;
+        font-size: 0.938rem;
+        line-height: 1.375rem;
         margin-right: 24px;
-        color: #f74646;
+        color: $error;
         width: 150px;
       }
     }
 
     &__button {
-      background: #0079ff;
+      background: $button;
       border-radius: 10px;
       font-family: "Space Mono";
       font-style: normal;
       font-weight: 700;
-      font-size: 14px;
-      line-height: 21px;
+      font-size: 0.875rem;
+      line-height: 1.313rem;
       border: none;
-      padding: 12.5px 14px 12.5px 14px;
-      color: #ffffff;
+      padding: 12.5px 14px;
+      color: white;
       margin-right: 7px;
       cursor: pointer;
 
@@ -141,7 +155,7 @@ main {
 
   .user {
     margin-top: 30px;
-    background: #fefefe;
+    background: $light-main-background;
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
     border-radius: 15px;
     margin-top: 32px;
@@ -173,58 +187,58 @@ main {
 
       &__name {
         font-weight: 700;
-        font-size: 16px;
-        line-height: 24px;
-        color: #2b3442;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: $light-name;
         margin: 0;
       }
 
       &__at {
         font-weight: 400;
-        font-size: 13px;
-        line-height: 19px;
-        color: #0079ff;
+        font-size: 0.813rem;
+        line-height: 1.188rem;
+        color: $button;
       }
 
       &__date {
         font-weight: 400;
-        font-size: 13px;
-        line-height: 19px;
-        color: #697c9a;
+        font-size: 0.813rem;
+        line-height: 1.188rem;
+        color: $light-date;
       }
     }
 
     &__bio {
       font-weight: 400;
-      font-size: 13px;
-      line-height: 25px;
-      color: #4b6a9b;
+      font-size: 0.813rem;
+      line-height: 1.563rem;
+      color: $light-text;
       margin-top: 32px;
     }
 
     &__stats {
       display: flex;
-      background: #f6f8ff;
+      background: $light-body-background;
       border-radius: 10px;
       justify-content: space-around;
       padding: 18px 14px;
       margin: 24px auto;
 
       &__text {
-        color: #4b6a9b;
+        color: $light-text;
         text-align: center;
         font-weight: 400;
-        font-size: 11px;
-        line-height: 16px;
+        font-size: 0.688rem;
+        line-height: 1;
       }
 
       &__number {
         font-weight: 700;
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 1rem;
+        line-height: 1.5rem;
         text-align: center;
         text-transform: uppercase;
-        color: #2b3442;
+        color: $light-name;
       }
     }
 
@@ -236,10 +250,10 @@ main {
         display: flex;
         align-items: center;
         font-weight: 400;
-        font-size: 13px;
-        line-height: 19px;
+        font-size: 0.813rem;
+        line-height: 1.188rem;
         margin-top: 16px;
-        color: #4b6a9b;
+        color: $light-text;
       }
 
       &__website,
@@ -260,12 +274,18 @@ main {
   }
 }
 
+//
+//
+//Tablet styling
+//
+//
+
 @media (min-width: 600px) {
   main {
     .search {
       &__input {
-        font-size: 18px;
-        line-height: 25px;
+        font-size: 1.125rem;
+        line-height: 1.563rem;
       }
     }
 
@@ -277,34 +297,34 @@ main {
           height: 117px;
         }
         &__name {
-          font-size: 26px;
-          line-height: 39px;
+          font-size: 1.625rem;
+          line-height: 2.438rem;
         }
         &__at {
-          font-size: 16px;
-          line-height: 24px;
+          font-size: 1rem;
+          line-height: 1.5rem;
         }
 
         &__date {
-          font-size: 15px;
-          line-height: 22px;
+          font-size: 0.938rem;
+          line-height: 1.375rem;
         }
       }
 
       &__bio {
-        font-size: 15px;
-        line-height: 25px;
+        font-size: 0.938rem;
+        line-height: 1.563rem;
       }
 
       &__stats {
         &__text {
-          font-size: 13px;
-          line-height: 19px;
+          font-size: 0.813rem;
+          line-height: 1.188rem;
         }
         &__number {
           text-align: start;
-          font-size: 22px;
-          line-height: 33px;
+          font-size: 1.375rem;
+          line-height: 2.063rem;
         }
       }
 
@@ -313,8 +333,8 @@ main {
         grid-template-columns: 1fr 1fr;
 
         &__item {
-          font-size: 15px;
-          line-height: 22px;
+          font-size: 0.938rem;
+          line-height: 1.375rem;
         }
         &__item:nth-child(3) {
           grid-area: 1 / 2 / 2 / 3;
@@ -323,6 +343,12 @@ main {
     }
   }
 }
+
+//
+//
+//Desktop styling
+//
+//
 
 @media (min-width: 900px) {
   main,
@@ -370,17 +396,17 @@ main {
 
 [data-theme="dark"] {
   body {
-    background-color: #141d2f;
+    background-color: $dark-body-background;
   }
 
   header {
     .nav {
       &__logo {
-        color: #ffffff;
+        color: $dark-text;
       }
 
       &__mode {
-        color: #ffffff;
+        color: $dark-text;
         visibility: hidden;
 
         &::after {
@@ -395,6 +421,7 @@ main {
       }
 
       &__icon {
+        //turns into white
         filter: brightness(0) invert(1);
         &:hover {
           filter: invert(64%) sepia(10%) saturate(1194%) hue-rotate(185deg)
@@ -406,10 +433,10 @@ main {
 
   main {
     .search {
-      background-color: #1e2a47;
+      background-color: $dark-main-background;
 
       &__input {
-        background-color: #1e2a47;
+        background-color: $dark-main-background;
         color: white;
 
         &::placeholder {
@@ -419,7 +446,7 @@ main {
     }
 
     .user {
-      background-color: #1e2a47;
+      background-color: $dark-main-background;
 
       &__info {
         &__name {
@@ -436,7 +463,7 @@ main {
       }
 
       &__stats {
-        background-color: #141d2f;
+        background-color: $dark-body-background;
 
         &__text,
         &__number {
